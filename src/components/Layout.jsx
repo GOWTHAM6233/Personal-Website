@@ -34,8 +34,8 @@ const Layout = () => {
           </div>
           <div>
             <h4>Links</h4>
-            <p><a className="footer-link" href="/projects">Projects</a></p>
-            <p><a className="footer-link" href="/about">About</a></p>
+            <p><NavLink className="footer-link" to="/projects">Projects</NavLink></p>
+            <p><NavLink className="footer-link" to="/about">About</NavLink></p>
           </div>
         </div>
         <div className="footer-bottom">© {new Date().getFullYear()} Gowtham</div>

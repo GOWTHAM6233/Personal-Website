@@ -1,3 +1,11 @@
+node_modules
+dist
+.DS_Store
+*.local
+*.log
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
 # Logs
 logs
 *.log

@@ -129,9 +129,9 @@ function ProjectDetails() {
                 GitHub Profile
               </a>
             )}
-            <a href="/projects" className="btn ghost">
+            <Link to="/projects" className="btn ghost">
               Back to Projects
-            </a>
+            </Link>
           </div>
         </div>
       </div>

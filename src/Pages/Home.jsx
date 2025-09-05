@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
+import profileImg from "../assets/Gowtham.P.jpg";
+
 function Home() {
   const handleDownloadResume = () => {
     try {
       // Create a link element to trigger download
       const link = document.createElement('a');
       // Use the correct filename that exists in public folder
-      link.href = '/Gowtham.Resume(full stack).pdf';
+      link.href = `${import.meta.env.BASE_URL}Gowtham.Resume(full stack).pdf`;
       link.download = 'Gowtham_Resume.pdf';
       link.target = '_blank';
       document.body.appendChild(link);
@@ -19,7 +22,7 @@ function Home() {
   const handleViewResume = () => {
     try {
       // Open resume in a new tab - use the correct filename
-      const resumeUrl = '/Gowtham.Resume(full stack).pdf';
+      const resumeUrl = `${import.meta.env.BASE_URL}Gowtham.Resume(full stack).pdf`;
       const newWindow = window.open(resumeUrl, '_blank');
       
       // Check if the window opened successfully
@@ -58,14 +61,14 @@ function Home() {
             </div>
           </div>
           <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
-            <a href="/projects" className="btn">View Projects</a>
-            <a href="/contact" className="btn ghost">Contact Me</a>
-            <a href="/about" className="btn ghost">About Me</a>
+            <Link to="/projects" className="btn">View Projects</Link>
+            <Link to="/contact" className="btn ghost">Contact Me</Link>
+            <Link to="/about" className="btn ghost">About Me</Link>
           </div>
         </div>
         <div className="hero-image-section">
           <div className="profile-image">
-            <img src="./src/assets/Gowtham.P.jpg" alt="Gowtham - Software Developer" />
+            <img src={profileImg} alt="Gowtham - Software Developer" />
           </div>
         </div>
       </section>
